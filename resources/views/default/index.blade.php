@@ -72,11 +72,16 @@
             margin: 0 5px;
         }
 
-        .fab:hover {
+        #socmed-link:hover .fab {
             color: #f8b0ba;
         }
 
-        .footer a {
+        #socmed-link {
+            color: #636363;
+            text-decoration: none;
+        }
+
+        .footer a#footer-link {
             margin: 0 15px;
             font-size: large;
             text-decoration: none;
@@ -86,7 +91,7 @@
             padding: 10px 4px;
         }
 
-        .footer a:hover {
+        .footer a#footer-link:hover {
             border-bottom: 1px solid #636363;
             border-top: 1px solid #636363;
         }
@@ -94,6 +99,8 @@
         .justify-content-evenly {
             justify-content: space-evenly;
         }
+
+
     </style>
     @yield('style')
 </head>
@@ -119,18 +126,18 @@
             Melts in your mouth, stays in your heart.
         </div>
         <div style="padding: 10px; font-size: 30px">
-            <i class="fab fa-instagram-square"></i>
-            <i class="fab fa-facebook-square"></i>
-            <i class="fab fa-twitter-square"></i>
-            <i class="fab fa-line"></i>
-            <i class="fab fa-whatsapp-square"></i>
+            <a id="socmed-link" target="_blank" href="https://instagram.com"><i class="fab fa-instagram-square"></i></a>
+            <a id="socmed-link" target="_blank" href="https://facebook.com"><i class="fab fa-facebook-square"></i></a>
+            <a id="socmed-link" target="_blank" href="https://twitter.com"><i class="fab fa-twitter-square"></i></a>
+            <a id="socmed-link" target="_blank" href="https://line.me"><i class="fab fa-line"></i></a>
+            <a id="socmed-link" target="_blank" href="https://whatsapp.com"><i class="fab fa-whatsapp-square"></i></a>
         </div>
         <hr>
         <div>
-            <a href="/mousse">Mousse</a>
-            <a href="/cart">Cart</a>
-            <a href="/about">About</a>
-            <a href="/login">Login</a>
+            <a id="footer-link" href="/mousse">Mousse</a>
+            <a id="footer-link" href="/cart">Cart</a>
+            <a id="footer-link" href="/about">About</a>
+            <a id="footer-link" href="/login">Login</a>
         </div>
     </div>
 </body>
