@@ -6,10 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./asset/font-awesome/css/all.css">
-    <script src="./asset/jquery/jquery-3.5.1.min.js"></script>
-    <link rel="stylesheet" href="./asset/bootstrap/css/bootstrap.css">
-    <script src="./asset/bootstrap/js/bootstrap.js"></script>
+    <link rel="stylesheet" href="/asset/font-awesome/css/all.css">
+    <script src="/asset/jquery/jquery-3.5.1.min.js"></script>
+    <link rel="stylesheet" href="/asset/bootstrap/css/bootstrap.css">
+    <script src="/asset/bootstrap/js/bootstrap.js"></script>
     <title>MousseBite</title>
     <style>
         html, body {
@@ -108,7 +108,7 @@
     <div class="mynavbar">
         <div class="home h-100">
             <a href="/" class="h-100">
-                <img src="./storage/images/logobanner/MousseBite-06.png" alt="" height="60%">
+                <img src="/storage/images/logobanner/MousseBite-06.png" alt="" height="60%">
             </a>
         </div>
         <div class="actions">

@@ -18,5 +18,5 @@ Route::get('/login', 'PageController@loginPage');
 Route::get('/register', 'PageController@registerPage');
 Route::get('/about', 'PageController@aboutPage');
 Route::get('/cart', 'PageController@cartPage');
-Route::get('/mousse/detail/{id}', 'PageController@detailPage');
 Route::get('/mousse', 'PageController@moussePage');
+Route::get('/mousse/detail/{id}', 'PageController@detailPage');

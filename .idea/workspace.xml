@@ -3,8 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="52da574e-9cf2-4a3d-87d4-7baf27914b2a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/about.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/about.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/PageController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/PageController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/default/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/default/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/detail.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/detail.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/mousse.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/mousse.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -152,7 +155,7 @@
       <workItem from="1600156400995" duration="7014000" />
       <workItem from="1600223272549" duration="21493000" />
       <workItem from="1600270955612" duration="1752000" />
-      <workItem from="1600311870483" duration="6855000" />
+      <workItem from="1600311870483" duration="14372000" />
     </task>
     <servers />
   </component>
@@ -164,10 +167,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="0" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1366.728@0.0.1366.728" timestamp="1600276508946" />
-    <state x="339" y="162" key="run.anything.popup" timestamp="1600242970714">
+    <state x="339" y="162" key="run.anything.popup" timestamp="1600335988378">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="339" y="162" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1600242970714" />
+    <state x="339" y="162" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1600335988378" />
     <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1600320745407">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

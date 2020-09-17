@@ -59,6 +59,7 @@ class PageController extends Controller
     }
 
     function moussePage() {
-        return view('mousse');
+        $mousses = Mousse::all();
+        return view('mousse', ['mousses'=>$mousses]);
     }
 }
