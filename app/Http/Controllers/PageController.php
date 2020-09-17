@@ -54,8 +54,9 @@ class PageController extends Controller
         return view('cart');
     }
 
-    function detailPage() {
-        return view('detail');
+    function detailPage(Request $request, $id) {
+        $mousse = Mousse::find($id);
+        return view('detail', ['mousse'=>$mousse]);
     }
 
     function moussePage() {
