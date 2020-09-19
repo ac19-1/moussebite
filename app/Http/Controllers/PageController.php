@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Cart;
 use App\Mousse;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class PageController extends Controller
 {
@@ -51,7 +53,8 @@ class PageController extends Controller
     }
 
     function cartPage() {
-        return view('cart');
+        $cart = Cart::all()->where('user_id', '=', Auth::user()->id);
+        return view('cart', ['cart'=>$cart]);
     }
 
     function detailPage(Request $request, $id) {

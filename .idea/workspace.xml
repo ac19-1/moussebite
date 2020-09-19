@@ -2,17 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="52da574e-9cf2-4a3d-87d4-7baf27914b2a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/AuthController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/CartController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeds/MousseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/MousseSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/default/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/default/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/detail.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/detail.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/login.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/login.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/mousse.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/mousse.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/register.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/register.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/PageController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/PageController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/cart.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/cart.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -167,7 +159,7 @@
       <workItem from="1600347050327" duration="6383000" />
       <workItem from="1600416756490" duration="5438000" />
       <workItem from="1600481859010" duration="6975000" />
-      <workItem from="1600525766755" duration="1538000" />
+      <workItem from="1600525766755" duration="12466000" />
     </task>
     <servers />
   </component>
@@ -182,10 +174,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="0" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1366.728@0.0.1366.728" timestamp="1600276508946" />
-    <state x="339" y="162" key="run.anything.popup" timestamp="1600335988378">
+    <state x="339" y="162" key="run.anything.popup" timestamp="1600532090203">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="339" y="162" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1600335988378" />
+    <state x="339" y="162" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1600532090203" />
     <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1600490238934">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
