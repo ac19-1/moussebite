@@ -42,6 +42,11 @@
         .size-button {
             box-shadow: none !important;
         }
+
+        .error-message {
+            margin-top: 10px;
+            color: #ff3939;
+        }
     </style>
 @endsection()
 
@@ -68,9 +73,10 @@
         </div>
         <div class="form w-50 mt-5 my-auto">
             <div class="inner bg-transparent">
-                <form action="">
+                <form action="" method="post">
                     @csrf
-                    <input type="hidden" name="id" value="{{$mousse->id}}">
+                    <input type="hidden" name="user_id" value="{{\Illuminate\Support\Facades\Auth::user()->id}}">
+                    <input type="hidden" name="mousse_id" value="{{$mousse->id}}">
                     <div class="sizes">
                         <div class="my-2" style="font-size: large">Pick size</div>
                         @if($mousse->size_id == 3)
@@ -86,6 +92,7 @@
                             <button type="button" class="btn size-button" disabled id="regular">Regular</button>
                             <button type="button" class="btn size-button selected" id="large">Large</button>
                         @endif()
+                        <div><label for="" class="error-message">{{$errors->first('size_id')}}</label></div>
                     </div>
                     <script>
                         function selectSize(size) {
@@ -103,10 +110,11 @@
                         }
                     </script>
                     <div class="quantity">
-                        <div class="mb-2 mt-5" style="font-size: large">Quantity</div>
+                        <div class="mb-2 mt-4" style="font-size: large">Quantity</div>
                         <input type="number" name="quantity" class="form-control w-50">
+                        <div><label for="" class="error-message">{{$errors->first('quantity')}}</label></div>
                     </div>
-                    <div class="button mt-5">
+                    <div class="button mt-4">
                         <button type="submit" class="btn w-50">Add to cart</button>
                     </div>
                 </form>

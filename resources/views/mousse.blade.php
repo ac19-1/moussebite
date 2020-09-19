@@ -52,6 +52,11 @@
             margin: 1rem;
             background-color: #fafafa;
             cursor: pointer;
+            transition: background-color 0.2s ease;
+        }
+
+        .mousse:hover {
+            background-color: #ffc7a9
         }
 
         .mousse .image {

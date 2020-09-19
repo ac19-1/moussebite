@@ -40,12 +40,12 @@ class MousseSeeder extends Seeder
         $mousse->save();
 
         $mousse = new Mousse();
-        $mousse->name = 'Double-color Panna Cotta Mousse';
+        $mousse->name = 'Double Layered Mix Berries Mousse';
         $mousse->price = 25000;
         $mousse->stock = 50;
         $mousse->size_id = 2;
-        $mousse->image = 'Double-color Panna Cotta Mousse.jpg';
-        $mousse->description = 'Two-layered mousse with fresh blueberries';
+        $mousse->image = 'Double Layered Mix Berries Mousse.jpg';
+        $mousse->description = 'Two-layered mousse with fresh blackberry and raspberry';
         $mousse->save();
 
         $mousse = new Mousse();

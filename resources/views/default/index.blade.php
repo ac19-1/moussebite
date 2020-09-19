@@ -113,9 +113,15 @@
         </div>
         <div class="actions">
             <a href="/mousse">Mousse</a>
-            <a href="/cart">Cart</a>
+            @if(\Illuminate\Support\Facades\Auth::check())
+                <a href="/cart">Cart</a>
+            @endif
             <a href="/about">About</a>
-            <a href="/login">Login</a>
+            @if(\Illuminate\Support\Facades\Auth::check())
+                <a href="/logout">Logout</a>
+            @else
+                <a href="/login">Login</a>
+            @endif
         </div>
     </div>
     <div class="content">

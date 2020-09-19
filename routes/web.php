@@ -15,8 +15,13 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', 'PageController@homePage');
 Route::get('/login', 'PageController@loginPage');
+Route::get('/logout','AuthController@logout');
 Route::get('/register', 'PageController@registerPage');
 Route::get('/about', 'PageController@aboutPage');
 Route::get('/cart', 'PageController@cartPage');
 Route::get('/mousse', 'PageController@moussePage');
 Route::get('/mousse/detail/{id}', 'PageController@detailPage');
+
+Route::post('/mousse/detail/{id}', 'CartController@addToCart');
+Route::post('/login','AuthController@login');
+Route::post('/register','AuthController@register');
