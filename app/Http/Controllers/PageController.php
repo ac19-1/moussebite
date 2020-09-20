@@ -53,8 +53,15 @@ class PageController extends Controller
     }
 
     function cartPage() {
+        if(!Auth::check()) {
+            return redirect('/');
+        }
         $cart = Cart::all()->where('user_id', '=', Auth::user()->id);
-        return view('cart', ['cart'=>$cart]);
+        $total = 0;
+        foreach ($cart as $item) {
+            $total += (Mousse::find($item->mousse_id)->price * $item->quantity);
+        }
+        return view('cart', ['cart'=>$cart, 'total'=>$total]);
     }
 
     function detailPage(Request $request, $id) {

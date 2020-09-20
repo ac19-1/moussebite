@@ -141,9 +141,15 @@
         <hr>
         <div>
             <a id="footer-link" href="/mousse">Mousse</a>
-            <a id="footer-link" href="/cart">Cart</a>
+            @if(\Illuminate\Support\Facades\Auth::check())
+                <a id="footer-link" href="/cart">Cart</a>
+            @endif
             <a id="footer-link" href="/about">About</a>
-            <a id="footer-link" href="/login">Login</a>
+            @if(\Illuminate\Support\Facades\Auth::check())
+                <a id="footer-link" href="/logout">Logout</a>
+            @else
+                <a id="footer-link" href="/login">Login</a>
+            @endif
         </div>
     </div>
 </body>

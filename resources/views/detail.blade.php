@@ -71,54 +71,80 @@
                 }}</div>
             </div>
         </div>
-        <div class="form w-50 mt-5 my-auto">
-            <div class="inner bg-transparent">
-                <form action="" method="post">
-                    @csrf
-                    <input type="hidden" name="user_id" value="{{\Illuminate\Support\Facades\Auth::user()->id}}">
-                    <input type="hidden" name="mousse_id" value="{{$mousse->id}}">
-                    <div class="sizes">
-                        <div class="my-2" style="font-size: large">Pick size</div>
-                        @if($mousse->size_id == 3)
-                            <input type="hidden" name="size_id" id="size">
-                            <button type="button" class="btn size-button" id="regular" onclick="selectSize('regular')">Regular</button>
-                            <button type="button" class="btn size-button" id="large" onclick="selectSize('large')">Large</button>
-                        @elseif($mousse->size_id == 1)
-                            <input type="hidden" name="size_id" value="1">
-                            <button type="button" class="btn size-button selected" id="regular">Regular</button>
-                            <button type="button" class="btn size-button" disabled id="large">Large</button>
-                        @else
-                            <input type="hidden" name="size_id" value="2">
-                            <button type="button" class="btn size-button" disabled id="regular">Regular</button>
-                            <button type="button" class="btn size-button selected" id="large">Large</button>
-                        @endif()
-                        <div><label for="" class="error-message">{{$errors->first('size_id')}}</label></div>
-                    </div>
-                    <script>
-                        function selectSize(size) {
-                            let buttons = document.getElementsByClassName('size-button');
-                            for (let i = 0; i < buttons.length; i++) {
-                                let button = buttons.item(i);
-                                button.className = "btn size-button"
+        @if($mousse->stock >0)
+            <div class="form w-50 mt-5 my-auto">
+                <div class="inner bg-transparent">
+                    <form action="" method="post">
+                        @csrf
+                        <input type="hidden" name="user_id" value="{{\Illuminate\Support\Facades\Auth::user()->id}}">
+                        <input type="hidden" name="mousse_id" value="{{$mousse->id}}">
+                        <div class="sizes">
+                            <div class="my-2" style="font-size: large">Pick size</div>
+                            @if($mousse->size_id == 3)
+                                <input type="hidden" name="size_id" id="size">
+                                <button type="button" class="btn size-button" id="regular" onclick="selectSize('regular')">Regular</button>
+                                <button type="button" class="btn size-button" id="large" onclick="selectSize('large')">Large</button>
+                            @elseif($mousse->size_id == 1)
+                                <input type="hidden" name="size_id" value="1">
+                                <button type="button" class="btn size-button selected" id="regular">Regular</button>
+                                <button type="button" class="btn size-button" disabled id="large">Large</button>
+                            @else
+                                <input type="hidden" name="size_id" value="2">
+                                <button type="button" class="btn size-button" disabled id="regular">Regular</button>
+                                <button type="button" class="btn size-button selected" id="large">Large</button>
+                            @endif()
+                            <div><label for="" class="error-message">{{$errors->first('size_id')}}</label></div>
+                        </div>
+                        <script>
+                            function selectSize(size) {
+                                let buttons = document.getElementsByClassName('size-button');
+                                for (let i = 0; i < buttons.length; i++) {
+                                    let button = buttons.item(i);
+                                    button.className = "btn size-button"
+                                }
+
+                                let b = document.getElementById(size);
+                                b.className = "btn size-button selected"
+
+                                let s = document.getElementById('size');
+                                s.value = size == 'regular' ? '1' : '2';
                             }
-
-                            let b = document.getElementById(size);
-                            b.className = "btn size-button selected"
-
-                            let s = document.getElementById('size');
-                            s.value = size == 'regular' ? '1' : '2';
-                        }
-                    </script>
-                    <div class="quantity">
-                        <div class="mb-2 mt-4" style="font-size: large">Quantity</div>
-                        <input type="number" name="quantity" class="form-control w-50">
-                        <div><label for="" class="error-message">{{$errors->first('quantity')}}</label></div>
-                    </div>
-                    <div class="button mt-4">
-                        <button type="submit" class="btn w-50">Add to cart</button>
-                    </div>
-                </form>
+                        </script>
+                        <div class="quantity">
+                            <div class="mb-2 mt-4" style="font-size: large">Quantity</div>
+                            <input type="number" name="quantity" class="form-control w-50">
+                            <div><label for="" class="error-message">{{$errors->first('quantity')}}</label></div>
+                        </div>
+                        <div class="button mt-4">
+                            <button type="submit" class="btn w-50">Add to cart</button>
+                        </div>
+                    </form>
+                </div>
             </div>
-        </div>
+        @else
+            <div class="form w-50 mt-5 my-auto">
+                <div class="inner bg-transparent">
+                    <form action="" method="post">
+                        @csrf
+                        <input type="hidden" name="user_id" value="{{\Illuminate\Support\Facades\Auth::user()->id}}">
+                        <input type="hidden" name="mousse_id" value="{{$mousse->id}}">
+                        <div class="sizes">
+                            <div class="my-2" style="font-size: large">Pick size</div>
+                            <button type="button" class="btn size-button" disabled id="regular">Regular</button>
+                            <button type="button" class="btn size-button" disabled id="large">Large</button>
+                            <div><label for="" class="error-message"></label></div>
+                        </div>
+                        <div class="quantity">
+                            <div class="mb-2 mt-4" style="font-size: large">Quantity</div>
+                            <input disabled type="number" name="quantity" class="form-control w-50">
+                            <div><label for="" class="error-message">{{$errors->first('quantity')}}</label></div>
+                        </div>
+                        <div class="button mt-4">
+                            <button type="submit" disabled class="btn w-50">Out of stock</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        @endif
     </div>
 @endsection()

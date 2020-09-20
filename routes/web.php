@@ -25,3 +25,5 @@ Route::get('/mousse/detail/{id}', 'PageController@detailPage');
 Route::post('/mousse/detail/{id}', 'CartController@addToCart');
 Route::post('/login','AuthController@login');
 Route::post('/register','AuthController@register');
+Route::post('/cart','CartController@checkout');
+Route::delete('/cart','CartController@deleteCart');
