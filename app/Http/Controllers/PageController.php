@@ -4,8 +4,11 @@ namespace App\Http\Controllers;
 
 use App\Cart;
 use App\Mousse;
+use App\TransactionDetail;
+use App\TransactionHeader;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 
 class PageController extends Controller
 {
@@ -41,10 +44,16 @@ class PageController extends Controller
     }
 
     function loginPage() {
+        if(Auth::check()) {
+            return redirect('/');
+        }
         return view('login');
     }
 
     function registerPage() {
+        if(Auth::check()) {
+            return redirect('/');
+        }
         return view('register');
     }
 
@@ -72,5 +81,24 @@ class PageController extends Controller
     function moussePage() {
         $mousses = Mousse::all();
         return view('mousse', ['mousses'=>$mousses]);
+    }
+
+    function profilePage() {
+        if(!Auth::check()) {
+            return redirect('/');
+        }
+        $headers = TransactionHeader::all()->where('user_id','=', Auth::user()->id)->sortByDesc('created_at');
+        $details = DB::table('transaction_details')
+            ->join('transaction_headers', 'transaction_headers.id','=','transaction_details.transaction_id')
+            ->where('transaction_headers.user_id','=',Auth::user()->id)
+            ->get();
+        return view('profile', ['user'=>Auth::user(), 'headers'=>$headers,'details'=>$details]);
+    }
+
+    function editProfilePage() {
+        if(!Auth::check()) {
+            return redirect('/');
+        }
+        return view('editprofile', ['user'=>Auth::user()]);
     }
 }

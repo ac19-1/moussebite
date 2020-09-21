@@ -66,6 +66,16 @@
             margin: 3% 0;
         }
 
+        .btn-pink {
+            background-color: #f8b0ba;
+            color: #434343;
+        }
+
+        .btn-pink:hover{
+            background-color: #d99aa2;
+            color: #434343;
+        }
+
         .fab {
             transition: color 0.2s ease;
             cursor: pointer;
@@ -118,6 +128,7 @@
             @endif
             <a href="/about">About</a>
             @if(\Illuminate\Support\Facades\Auth::check())
+                <a href="/profile">Profile</a>
                 <a href="/logout">Logout</a>
             @else
                 <a href="/login">Login</a>
@@ -146,6 +157,7 @@
             @endif
             <a id="footer-link" href="/about">About</a>
             @if(\Illuminate\Support\Facades\Auth::check())
+                <a id="footer-link" href="/profile">Profile</a>
                 <a id="footer-link" href="/logout">Logout</a>
             @else
                 <a id="footer-link" href="/login">Login</a>

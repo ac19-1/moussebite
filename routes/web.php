@@ -21,9 +21,12 @@ Route::get('/about', 'PageController@aboutPage');
 Route::get('/cart', 'PageController@cartPage');
 Route::get('/mousse', 'PageController@moussePage');
 Route::get('/mousse/detail/{id}', 'PageController@detailPage');
+Route::get('/profile/edit','PageController@editProfilePage');
+Route::get('/profile','PageController@profilePage');
 
 Route::post('/mousse/detail/{id}', 'CartController@addToCart');
 Route::post('/login','AuthController@login');
 Route::post('/register','AuthController@register');
 Route::post('/cart','CartController@checkout');
 Route::delete('/cart','CartController@deleteCart');
+Route::post('/profile/edit','UserController@updateProfile');

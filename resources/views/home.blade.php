@@ -67,24 +67,6 @@
             box-sizing: border-box;
         }
 
-        .mousse-desc {
-            position: absolute;
-            bottom: -30%;
-            background-color: rgba(66,66,66,0.8);
-            color: white;
-            padding: 5% 5%;
-            width: 100%;
-            box-sizing: border-box;
-            text-align: center;
-            transition: all 0.5s ease;
-            transform: translateY(30%);
-        }
-
-        .top-mousse:hover .mousse-desc {
-            bottom: 0;
-            transform: translateY(-100%);
-        }
-
         .testimony {
             height: 90vh;
             background-color: #507796;
@@ -140,11 +122,9 @@
                 <div class="top-mousse-desc position-absolute">
                     <h5>{{$recommended->name}}</h5>
                 </div>
-                <div class="top-mousse position-absolute">
-                    <div class="mousse-desc">
-                        {{$recommended->description}}
-                    </div>
-                </div>
+                <a href="/mousse/detail/{{$recommended->id}}">
+                    <div class="top-mousse position-absolute"></div>
+                </a>
             </div>
         </div>
     </div>

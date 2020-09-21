@@ -25,16 +25,6 @@
             background-color: lightslategray;
             color: white;
         }
-
-        .btn-pink {
-            background-color: #f8b0ba;
-            color: #434343;
-        }
-
-        .btn-pink:hover{
-            background-color: #d99aa2;
-            color: #434343;
-        }
     </style>
 @endsection()
 
@@ -62,9 +52,9 @@
                             <div class="name w-100" style="width: 30vh">{{\App\Mousse::find($item->mousse_id)->name}}</div>
                             <div class="size w-100 text-capitalize">Size: {{\App\Size::find($item->size_id)->name}}</div>
                         </div>
-                        <div class="price mx-2 text-center" style="width: 30%">Rp.{{\App\Mousse::find($item->mousse_id)->price}},-</div>
+                        <div class="price mx-2 text-center" style="width: 30%">Rp{{number_format(\App\Mousse::find($item->mousse_id)->price,0,',','.')}},-</div>
                         <div class="quantity mx-2 text-center" style="width: 30%">{{$item->quantity}}</div>
-                        <div class="total mx-2 text-center" style="width: 30%">Rp.{{(\App\Mousse::find($item->mousse_id)->price * $item->quantity)}},-</div>
+                        <div class="total mx-2 text-center" style="width: 30%">Rp{{number_format(\App\Mousse::find($item->mousse_id)->price * $item->quantity,0,',','.')}},-</div>
                         <div class="remove mx-2 text-center font-weight-bold" style="width: 30%">
                             <form action="" method="post">
                                 @csrf
@@ -93,7 +83,7 @@
                         <div class="address">
                             <textarea required name="address" id="" class="form-control w-100 my-3" placeholder="Address">{{\Illuminate\Support\Facades\Auth::user()->address}}</textarea>
                         </div>
-                        <div class="total mt-4">Total: Rp.{{$total}},-</div>
+                        <div class="total mt-4">Total: Rp{{number_format($total,0,',','.')}},-</div>
                         <div class="d-flex justify-content-end mt-4">
                             <button type="submit" class="btn btn-light">Check out</button>
                         </div>

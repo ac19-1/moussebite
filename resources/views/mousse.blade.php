@@ -84,7 +84,7 @@
                 <a href="/mousse/detail/{{$mousse->id}}" style="color: #636363; text-decoration: none">
                     <div class="image" style="background-image: url('./storage/images/mousse/{{$mousse->image}}')"></div>
                     <div class="name text-center my-2">{{$mousse->name}}</div>
-                    <div class="price text-center mb-2">Rp.{{$mousse->price}},-</div>
+                    <div class="price text-center mb-2">Rp{{number_format($mousse->price,0,',','.')}},-</div>
                 </a>
             </div>
         @endforeach

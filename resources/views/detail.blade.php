@@ -54,7 +54,7 @@
     <div class="detail d-flex">
         <div class="mousse w-50">
             <div class="image mx-auto mt-5">
-                <label for="" class="price">Rp.{{$mousse->price}},-</label>
+                <label for="" class="price">Rp{{number_format($mousse->price,0,',','.')}},-</label>
             </div>
             <div class="description mx-auto p-3">
                 <div class="name text-center">
@@ -76,7 +76,9 @@
                 <div class="inner bg-transparent">
                     <form action="" method="post">
                         @csrf
-                        <input type="hidden" name="user_id" value="{{\Illuminate\Support\Facades\Auth::user()->id}}">
+                        @if(\Illuminate\Support\Facades\Auth::check())
+                            <input type="hidden" name="user_id" value="{{\Illuminate\Support\Facades\Auth::user()->id}}">
+                        @endif
                         <input type="hidden" name="mousse_id" value="{{$mousse->id}}">
                         <div class="sizes">
                             <div class="my-2" style="font-size: large">Pick size</div>
