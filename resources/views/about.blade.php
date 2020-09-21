@@ -44,14 +44,13 @@
         }
 
         .contact {
-            height: 90vh;
             box-sizing: border-box;
             background-color: #f9d0c1;
         }
 
         .socmeds {
             width: 100%;
-            height: 70%;
+            height: 350px;
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
