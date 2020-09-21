@@ -81,13 +81,13 @@
                 </div>
                 <div class="inputs w-100 d-flex align-items-center justify-content-center flex-column flex-wrap" style="height:80%">
                     <div class="name my-2 w-100">
-                        <input type="text" name="name" class="form-control" placeholder="Name" id="">
+                        <input required type="text" name="name" class="form-control" placeholder="Name" id="">
                     </div>
                     <div class="email my-2 w-100">
-                        <input type="email" name="email" class="form-control" placeholder="Email Address" id="">
+                        <input required type="email" name="email" class="form-control" placeholder="Email Address" id="">
                     </div>
                     <div class="password my-2 w-100">
-                        <input type="password" name="password" class="form-control" placeholder="Password" id="">
+                        <input required type="password" name="password" class="form-control" placeholder="Password" id="">
                     </div>
                     <div class="button my-2 w-100">
                         <button type="submit" class="btn bg-light w-100">Register</button>
