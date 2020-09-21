@@ -65,9 +65,9 @@
                 <div class="size">Size Available : {{
                     $mousse->size_id == 1 ?
                         'Regular only'
-                    : $mousse->size_id == 2 ?
+                    : ($mousse->size_id == 2 ?
                         'Large only'
-                    : 'Regular or Large'
+                    : 'Regular or Large')
                 }}</div>
             </div>
         </div>
