@@ -21,12 +21,12 @@ class PageController extends Controller
             [
                 'image' => $mousses[4]->image,
                 'name' => $mousses[4]->name,
-                'testimony' => 'This mousse is so good, it melts in your mouth and not too sweet. My favorite is layered fruit mousse! It\'s so great and so fresh!',
+                'testimony' => 'This mousse is so good, it melts in your mouth and not too sweet. My favorite is strawberry almond mousse! It\'s so fresh!',
             ],
             [
                 'image' => $mousses[5]->image,
                 'name' => $mousses[5]->name,
-                'testimony' => 'I like cheesecake and I love this! This mousse will make you feel like eating the real cheesecake with the fresh of lemon! Such a great combination',
+                'testimony' => 'I like strawberries and I love this! This mousse will make you feel the sweetness of strawberry. Such a great mousse',
             ],
             [
                 'image' => $mousses[6]->image,
@@ -36,7 +36,7 @@ class PageController extends Controller
             [
                 'image' => $mousses[7]->image,
                 'name' => $mousses[7]->name,
-                'testimony' => 'The perfect combination of strawberry and white chocolate.',
+                'testimony' => 'The perfect combination of strawberry, chocolate, and almond.',
             ]
         ];
 
