@@ -14,7 +14,7 @@
             top: 35%;
             left: 30%;
             transform: translate(-30%, -35%);
-            background-image: url("./storage/images/mousse/Layered Fruit Mousse.jpg");
+            background-image: url("./storage/images/mousse/Tri-layered Raspberry Mousse.png");
             background-size: cover;
             background-position: center;
             border: 1px solid floralwhite;
@@ -75,7 +75,7 @@
             <div class="fade-vertical position-absolute"></div>
         </div>
         <div class="promoted-desc position-absolute">
-            <h1 class="d-flex">Layered Fruit Mousse</h1>
+            <h1 class="d-flex">Tri-layered Raspberry Mousse</h1>
         </div>
     </div>
     <div class="products p-5">
